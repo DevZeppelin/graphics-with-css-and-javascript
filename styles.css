@@ -225,3 +225,29 @@ button:hover {
     opacity: 0;
   }
 }
+
+.is-dark-mode {
+  --bkg-primary: rgb(15, 16, 17);
+  --bkg-secundary: rgb(36, 105, 151);
+  --bkg-third: rgb(40, 46, 49);
+  --text-color: rgb(166, 229, 248);
+  --principal: rgb(5, 5, 5);
+}
+
+.is-light-mode {
+  --bkg-primary: rgb(221, 221, 221);
+  --bkg-secundary: rgb(35, 162, 221);
+  --bkg-third: rgb(181, 208, 221);
+  --text-color: rgb(44, 60, 65);
+  --principal: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bkg-primary: rgb(15, 16, 17);
+    --bkg-secundary: rgb(36, 105, 151);
+    --bkg-third: rgb(40, 46, 49);
+    --text-color: rgb(166, 229, 248);
+    --principal: rgb(5, 5, 5);
+  }
+}
