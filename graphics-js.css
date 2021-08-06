@@ -1,0 +1,58 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700);
+
+* {
+  font-family: Ubuntu;
+  max-width: 100vw;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(to right, rgb(32, 114, 161), rgb(17, 126, 177), rgb(11, 142, 146));
+}
+
+a {
+  color: cornsilk;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+canvas {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+h1 {
+  font-size: large;
+  color: white;
+  text-transform: uppercase;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+canvas {
+  padding-bottom: 20px;
+}
+
+.back-button {
+  display: block;
+  margin: auto;
+  text-align: center;
+  padding: 1em;
+  margin-bottom: 1em;
+  background-color: rgb(24, 77, 99);
+  color: white;
+  text-decoration: none;
+}
+
+.back-button:hover {
+  background-color: rgb(41, 123, 190);
+  text-decoration: solid;
+  color: black;
+}

@@ -1,0 +1,227 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700);
+
+:root {
+  --bkg-primary: rgb(221, 221, 221);
+  --bkg-secundary: rgb(35, 162, 221);
+  --bkg-third: rgb(181, 208, 221);
+  --text-color: rgb(44, 60, 65);
+  --principal: #fff;
+}
+
+.dark-mode {
+  --bkg-primary: rgb(15, 16, 17);
+  --bkg-secundary: rgb(36, 105, 151);
+  --bkg-third: rgb(40, 46, 49);
+  --text-color: rgb(166, 229, 248);
+  --principal: rgb(5, 5, 5);
+}
+
+* {
+  transition: background-color 0.4s ease, color 0.3s ease;
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Ubuntu;
+}
+
+.container {
+  display: flex;
+  margin: auto;
+  width: 90%;
+  max-width: 1200px;
+
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+a {
+  color: #005c98;
+}
+
+.link-button {
+  font-weight: bolder;
+}
+
+.main-title {
+  font-size: large;
+  color: var(--text-color);
+  text-transform: uppercase;
+  padding-bottom: 2em;
+  font-size: xx-large;
+}
+
+button {
+  padding: 15px;
+  text-transform: uppercase;
+  color: var(--principal);
+  background-color: var(--text-color);
+}
+
+button:hover {
+  background-color: var(--bkg-secundary);
+  color: var(--text-color);
+}
+
+/*DARK MODE SWITCH*/
+
+.checkbox-container {
+  position: absolute;
+  top: 5px;
+  right: 25px;
+  color: var(--text-color);
+}
+
+.checkbox-container p {
+  padding-top: 1rem;
+}
+
+.checkbox {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  
+}
+
+.switch {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+
+  background-color: var(--principal);
+  transition: background-color 0.2s;
+}
+
+.circle {
+  content: "";
+
+  position: absolute;
+  top: 2px;
+  left: 3px;
+
+  width: 22px;
+  height: 22px;
+  border-radius: 22px;
+
+  background: var(--bkg-secundary);
+  transition: 0.2s;
+}
+
+.checkbox:checked + .switch .circle {
+  left: calc(100% -5px);
+  transform: translateX(100%);
+}
+
+.checkbox:checked + .switch {
+  background-color: var(--text-color);
+}
+
+/*FONDO ANIMADO*/
+
+.background-animate {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    to right,
+    var(--bkg-primary),
+    var(--bkg-secundary),
+    var(--bkg-third)
+  );
+}
+
+.burbuja {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  opacity: 0.6;
+  background: #fff 50%;
+
+  position: absolute;
+  top: 0%;
+  left: 5%;
+
+  animation: burbujas 3s linear infinite;
+}
+
+.burbuja:nth-child(1) {
+  width: 10px;
+  height: 10px;
+  left: 20%;
+  animation-duration: 5s;
+}
+.burbuja:nth-child(2) {
+  width: 5px;
+  height: 5px;
+  left: 44%;
+  animation-duration: 3s;
+}
+.burbuja:nth-child(3) {
+  width: 11px;
+  height: 11px;
+  left: 67%;
+  animation-duration: 6s;
+}
+.burbuja:nth-child(4) {
+  width: 2px;
+  height: 2px;
+  left: 88%;
+  animation-duration: 3s;
+}
+.burbuja:nth-child(5) {
+  width: 7px;
+  height: 7px;
+  left: 55%;
+  animation-duration: 5s;
+}
+.burbuja:nth-child(6) {
+  width: 9px;
+  height: 9px;
+  left: 77%;
+  animation-duration: 4s;
+}
+.burbuja:nth-child(7) {
+  width: 13px;
+  height: 13px;
+  left: 30%;
+  animation-duration: 6s;
+}
+.burbuja:nth-child(8) {
+  width: 11px;
+  height: 11px;
+  left: 40%;
+  animation-duration: 4s;
+}
+.burbuja:nth-child(9) {
+  width: 5px;
+  height: 5px;
+  left: 10%;
+  animation-duration: 3s;
+}
+.burbuja:nth-child(10) {
+  width: 8px;
+  height: 8px;
+  left: 19%;
+  animation-duration: 3s;
+}
+
+@keyframes burbujas {
+  0% {
+    top: 5%;
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    top: 95%;
+    opacity: 0;
+  }
+}
