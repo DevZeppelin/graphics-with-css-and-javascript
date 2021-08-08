@@ -10,6 +10,16 @@ body {
   background: linear-gradient(to right, rgb(32, 114, 161), rgb(17, 126, 177), rgb(11, 142, 146));
 }
 
+.titular {
+  display: block;
+  line-height: 60px;
+  margin: 0;
+  text-align: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-size: xx-large
+}
+
 a {
   color: cornsilk;
   text-decoration: none;

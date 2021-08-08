@@ -52,6 +52,11 @@ a {
   text-transform: uppercase;
   padding-bottom: 2em;
   font-size: xx-large;
+  background: linear-gradient(to right, var(--bkg-secundary) 0%, var(--text-color) 50%, var(--bkg-secundary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+  text-shadow: 3px 3px 2px  rgb(40, 46, 49, 0.5);   
+  
 }
 
 button {
@@ -82,7 +87,7 @@ button:hover {
 .checkbox {
   height: 0;
   width: 0;
-  visibility: hidden;
+  visibility: hidden; 
   
 }
 

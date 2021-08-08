@@ -12,6 +12,7 @@ const checkbox = document.querySelector('#check-box')
 
 console.log(checkbox)
 
+
 if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
     checkbox.setAttribute('checked', true)
 }

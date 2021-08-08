@@ -4,7 +4,6 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
- 
 }
 
 body {
@@ -15,7 +14,6 @@ body {
     rgb(21, 85, 122)
   );
 }
-
 
 .back-button {
   display: block;
@@ -61,7 +59,6 @@ a {
   text-decoration: none;
   font-size: 15px;
 }
-
 
 h1,
 h2,
@@ -459,11 +456,10 @@ BAR-CHART
   flex-direction: column;
   justify-content: center;
   margin: auto;
-  height: 200px
+  height: 200px;
 }
 
 .moving-box {
-  
   width: 80px;
   height: 80px;
   border: 6px solid teal;
@@ -481,18 +477,24 @@ BAR-CHART
     transform: translateX(0px);
   }/*MOVING BOX*/
 
+  25% {
+    transform: translate(170px, 0px);
+  }
   50% {
-    transform: translateX(170px);
+    /* transform: translateY(170px); */
+    transform: translate(170px, 170px);
+  }
+  75% {
+    transform: translate(0px, 170px);
   }
   100% {
-    transform: translateX(0px);
+    transform: translateY(0px, -170px);
   }
 }
 
 /*OLYMPIC RINGS*/
 
 .olympic-rings-container div {
-
   height: 4rem;
   width: 4rem;
   border: 6px solid;
@@ -530,18 +532,58 @@ BAR-CHART
   transform: rotate(90deg);
 }
 
-.bottom{
+.bottom {
   position: relative;
   right: 2.5rem;
 }
 
-@media screen and (max-width: 750px){
+.red:hover,
+.blue:hover,
+.black:hover,
+.green:hover,
+.yellow:hover {
+  color: #9099b7;
+}
+
+@media screen and (max-width: 750px) {
   .olympic-ring {
     width: 130px;
     height: 130px;
   }
+}
 
-  .bottom{
-    right: 7rem;
-  }
+/*CORAZON*/
+
+.css-heart {
+  margin: auto;
+  margin-top: 5rem;
+  height: 90px;
+  width: 90px;
+  background-color: slateblue;
+  transform: rotate(45deg);
+  position: relative;
+}
+
+
+.css-heart:hover {
+  background-color: red;
+}
+
+.css-heart::before,
+.css-heart::after {
+  content: "";
+  background-color: inherit;
+  height: inherit;
+  width: inherit;
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.css-heart::before {
+  bottom: 45px;
+}
+
+.css-heart::after {
+  right: 45px;
 }
